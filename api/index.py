@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, flash, redirect, url_for
 
-app = Flask(__name__, template_folder="../templates")
+app = Flask(__name__, template_folder="../templates", static_folder="../static")
+
 app.secret_key = 'pyva-2026-secret'
 
 @app.route('/')
@@ -29,6 +30,3 @@ def contact():
         flash('Thank you for contacting us!', 'success')
         return redirect(url_for('contact'))
     return render_template('contact.html')
-
-# IMPORTANT for Vercel
-app.debug = False
