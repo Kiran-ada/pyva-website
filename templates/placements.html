@@ -1,0 +1,513 @@
+{% extends "base.html" %}
+{% block title %}Placed Students - PYVA Training{% endblock %}
+
+{% block content %}
+<!-- Placements Hero -->
+<section class="placements-hero">
+    <div class="container">
+        <h1>Our <span style="color: var(--black);">Success</span> Stories</h1>
+        <p>20+ Students Placed in Top Companies</p>
+        <div class="stats-row">
+            <div class="stat-box">
+                <h2>20+</h2>
+                <p>Students Placed</p>
+            </div>
+            <div class="stat-box">
+                <h2>10+</h2>
+                <p>Companies</p>
+            </div>
+            <div class="stat-box">
+                <h2>₹6 LPA</h2>
+                <p>Highest Package</p>
+            </div>
+            <div class="stat-box">
+                <h2>₹2.5 LPA</h2>
+                <p>Average Package</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--  AUTO-SCROLLING STUDENT CARDS -->
+<section class="placements-section">
+    <div class="container">
+        <h2 class="section-title">Recent <span style="color: var(--orange);">Placements</span></h2>
+        
+        <!-- Scrolling Container -->
+        <div class="scroll-container">
+            <!-- Track 1 - Scrolls Left -->
+            <div class="scroll-track track-left">
+                <!-- Student Card 1 -->
+                <div class="student-card">
+                    <div class="student-image">
+                        <img src="static/images/KIRAN.jpg" alt="Student 1">
+                    </div>
+                    <div class="student-info">
+                        <h3>kiran</h3>
+                        <p class="course">Python Full Stack</p>
+                        <div class="company-info">
+                            <img src="static/images/partner1.png" alt="DATALABS " class="company-logo">
+                            <div class="package">
+                                <span class="package-amount">2.5 LPA</span>
+                                <span class="company-name">DATALABS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Student Card 2 -->
+                <div class="student-card">
+                    <div class="student-image">
+                        <img src="static/images/charan.jpeg" alt="Student 2">
+                    </div>
+                    <div class="student-info">
+                        <h3>Charan</h3>
+                        <p class="course">QA Automation Engineer</p>
+                        <div class="company-info">
+                            <img src="static/images/cognizant.jpg" alt="cognizant" class="company-logo">
+                            <div class="package">
+                                <span class="package-amount">5 LPA</span>
+                                <span class="company-name">cognizant</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Student Card 3 -->
+                <div class="student-card">
+                    <div class="student-image">
+                        <img src="static/images/Bhavani.jpeg" alt="Student 3">
+                    </div>
+                    <div class="student-info">
+                        <h3>Bhavani</h3>
+                        <p class="course">Associate engineer</p>
+                        <div class="company-info">
+                            <img src="static/images/Tech Mahindra.png" alt="Tech Mahindra" class="company-logo">
+                            <div class="package">
+                                <span class="package-amount">₹4.5 LPA</span>
+                                <span class="company-name">Tech Mahindra </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Student Card 4 -->
+                <div class="student-card">
+                    <div class="student-image">
+                        <img src="static/images/Ramoji.jpeg" alt="Student 4">
+                    </div>
+                    <div class="student-info">
+                        <h3>Ramoji</h3>
+                        <p class="course">Software developer</p>
+                        <div class="company-info">
+                            <img src="static/images/Eurofins.webp" alt="Eurofins" class="company-logo">
+                            <div class="package">
+                                <span class="package-amount">6 LPA</span>
+                                <span class="company-name">Eurofins</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Student Card 5 -->
+                <div class="student-card">
+                    <div class="student-image">
+                        <img src="static/images/Priya.jpeg" alt="Student 5">
+                    </div>
+                    <div class="student-info">
+                        <h3>Priya</h3>
+                        <p class="course">Software engineer</p>
+                        <div class="company-info">
+                            <img src="static/images/cognizant.jpg" alt="Cognizant" class="company-logo">
+                            <div class="package">
+                                <span class="package-amount">4.5 LPA</span>
+                                <span class="company-name">Cognizant</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Duplicate cards for infinite scroll -->
+                <div class="student-card">
+                    <div class="student-image">
+                        <img src="static/images/Sree Kavya.jpeg" alt="Student 6">
+                    </div>
+                    <div class="student-info">
+                        <h3>Sree Kavya </h3>
+                        <p class="course">Software developer</p>
+                        <div class="company-info">
+                            <img src="static/images/Amazon.webp" alt="Amazon" class="company-logo">
+                            <div class="package">
+                                <span class="package-amount">6.0 LPA</span>
+                                <span class="company-name">Amazon</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="student-card">
+                    <div class="student-image">
+                        <img src="static/images/C.Likitha.jpeg" alt="Student 7">
+                    </div>
+                    <div class="student-info">
+                        <h3>Priya Sharma</h3>
+                        <p class="course">Software engineer</p>
+                        <div class="company-info">
+                            <img src="static/images/LTIMIND.webp" alt="Wipro" class="company-logo">
+                            <div class="package">
+                                <span class="package-amount">₹4.5 LPA</span>
+                                <span class="company-name">LTI Mindtree </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Track 2 - Scrolls Right -->
+            <div class="scroll-track track-right">
+                <!-- Student Card 6 -->
+                <div class="student-card">
+                    <div class="student-image">
+                        <img src="static/images/kiran Kumar.jpeg" alt="Student 6">
+                    </div>
+                    <div class="student-info">
+                        <h3>Kiran kumar</h3>
+                        <p class="course">Backend Development</p>
+                        <div class="company-info">
+                            <img src="static/images/Doms global.jpg" alt="Doms global" class="company-logo">
+                            <div class="package">
+                                <span class="package-amount">3.5 LPA</span>
+                                <span class="company-name">Doms global</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Student Card 7 -->
+                <div class="student-card">
+                    <div class="student-image">
+                        <img src="static/images/dhanush.jpeg" alt="Student 7">
+                    </div>
+                    <div class="student-info">
+                        <h3>Dhanush</h3>
+                        <p class="course">System Engineer</p>
+                        <div class="company-info">
+                            <img src="static/images/teamLease.png" alt="TeamLease" class="company-logo">
+                            <div class="package">
+                                <span class="package-amount">3.5 LPA</span>
+                                <span class="company-name">TeamLease</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Student Card 8 -->
+                <div class="student-card">
+                    <div class="student-image">
+                        <img src="static/images/prem.png" alt="Student 8">
+                    </div>
+                    <div class="student-info">
+                        <h3>Prem sohan</h3>
+                        <p class="course">Software Engineer</p>
+                        <div class="company-info">
+                            <img src="static/images/tcs digital.jpg" alt="Tcs digital" class="company-logo">
+                            <div class="package">
+                                <span class="package-amount">7 LPA</span>
+                                <span class="company-name">Tcs digital </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Student Card 9 -->
+                <div class="student-card">
+                    <div class="student-image">
+                        <img src="static/images/Lavanaya.png" alt="Student 9">
+                    </div>
+                    <div class="student-info">
+                        <h3>Yellammaraju Lavanya</h3>
+                        <p class="course">Junior Analyst</p>
+                        <div class="company-info">
+                            <img src="static/images/Data marshall.jpg" alt="Data marshall" class="company-logo">
+                            <div class="package">
+                                <span class="package-amount">3.8 LPA</span>
+                                <span class="company-name">Data marshall</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Student Card 10 -->
+                <div class="student-card">
+                    <div class="student-image">
+                        <img src="static/images/Madhuri.jpeg" alt="Student 10">
+                    </div>
+                    <div class="student-info">
+                        <h3>Madhuri</h3>
+                        <p class="course"> Advisor </p>
+                        <div class="company-info">
+                            <img src="static/images/cognizant.jpg" alt="Concentrix " class="company-logo">
+                            <div class="package">
+                                <span class="package-amount">4.5 LPA</span>
+                                <span class="company-name">Concentrix </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="student-card">
+                    <div class="student-image">
+                        <img src="static/images/Charan1.jpeg" alt="Student 6">
+                    </div>
+                    <div class="student-info">
+                        <h3>Charan</h3>
+                        <p class="course">Senior associate</p>
+                        <div class="company-info">
+                            <img src="static/images/Wipro.png" alt="Wipro" class="company-logo">
+                            <div class="package">
+                                <span class="package-amount">4.5 LPA</span>
+                                <span class="company-name">Wipro </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="student-card">
+                    <div class="student-image">
+                        <img src="static/images/Uday kiran .jpeg" alt="Student 7">
+                    </div>
+                    <div class="student-info">
+                        <h3>Uday Kiran</h3>
+                        <p class="course">Senior Advisor</p>
+                        <div class="company-info">
+                            <img src="static/images/digitide.png" alt="Digitide solutions" class="company-logo">
+                            <div class="package">
+                                <span class="package-amount">3 LPA</span>
+                                <span class="company-name">Digitide solutions</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="placement-cta">
+    <div class="container">
+        <h2>Want to Be Our Next Success Story?</h2>
+        <p>Join 2000+ students who transformed their careers with PYVA</p>
+        <a href="{{ url_for('contact') }}" class="btn btn-primary btn-large">Book Free Demo</a>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+/* Hero Section */
+.placements-hero {
+    padding: 140px 0 80px;
+    background: linear-gradient(135deg, #ff8c42  0%, #ff8c42 100%);
+    color: white;
+    text-align: center;
+}
+
+.placements-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+
+.placements-hero p {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+}
+
+.stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.stat-box {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 24px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stat-box h2 {
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+    font-weight: 800;
+}
+
+.stat-box p {
+    font-size: 1rem;
+    opacity: 0.9;
+    margin: 0;
+}
+
+/* Placements Section */
+.placements-section {
+    padding: 100px 0;
+    background: #f8fafc;
+    overflow: hidden;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 60px;
+}
+
+.scroll-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.scroll-track {
+    display: flex;
+    gap: 32px;
+    width: fit-content;
+}
+
+/* Auto Scroll Animation */
+.track-left {
+    animation: scrollLeft 30s linear infinite;
+}
+
+.track-right {
+    animation: scrollRight 30s linear infinite;
+}
+
+@keyframes scrollLeft {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+@keyframes scrollRight {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+}
+
+/* Pause on hover */
+.scroll-track:hover {
+    animation-play-state: paused;
+}
+
+/* Student Card */
+.student-card {
+    background: white;
+    border-radius: 20px;
+    padding: 24px;
+    min-width: 320px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.student-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.student-image {
+    flex-shrink: 0;
+}
+
+.student-image img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--orange);
+}
+
+.student-info {
+    flex: 1;
+}
+
+.student-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 4px;
+    color: var(--dark);
+}
+
+.course {
+    font-size: 0.9rem;
+    color: var(--gray);
+    margin-bottom: 12px;
+}
+
+.company-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.company-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.package {
+    display: flex;
+    flex-direction: column;
+}
+
+.package-amount {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--orange);
+}
+
+.company-name {
+    font-size: 0.85rem;
+    color: var(--gray);
+}
+
+/* CTA Section */
+.placement-cta {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--orange), #ff8c42);
+    color: white;
+    text-align: center;
+}
+
+.placement-cta h2 {
+    font-size: 2.8rem;
+    margin-bottom: 16px;
+}
+
+.placement-cta p {
+    font-size: 1.3rem;
+    margin-bottom: 32px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .stats-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .student-card {
+        min-width: 280px;
+    }
+    
+    .placements-hero h1 {
+        font-size: 2.5rem;
+    }
+}
+</style>
+{% endblock %}

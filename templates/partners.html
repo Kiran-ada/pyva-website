@@ -1,0 +1,251 @@
+{% extends "base.html" %}
+{% block title %}Our Partners - PYVA Training{% endblock %}
+
+{% block content %}
+<!-- Partners Hero -->
+<section class="partners-hero">
+    <div class="container">
+        <div class="hero-content text-center">
+            <h1>Our <span style="color: var(--orange);">Trusted</span> Partners</h1>
+            <p>Collaborating with industry leaders to deliver world-class training</p>
+        </div>
+    </div>
+</section>
+
+<!-- Partners Grid Section -->
+<section class="partners-section">
+    <div class="container">
+        <!-- Partners Grid - 4 per row -->
+        <div class="partners-grid">
+            <!-- PARTNER 1 -->
+            <div class="partner-card">
+                <div class="partner-logo">
+                    <img src="{{ url_for('static', filename='images/partner1.png') }}" alt="Company 1" loading="lazy">
+                </div>
+                <h4>DATALABS</h4>
+                <p>CEO</p>
+            </div>
+
+            <!-- PARTNER 2 -->
+            <div class="partner-card">
+                <div class="partner-logo">
+                    <img src="{{ url_for('static', filename='images/partner2.png') }}" alt="Company 2" loading="lazy">
+                </div>
+                <h4>PYVA</h4>
+                <p>CEO</p>
+            </div>
+
+            <!-- PARTNER 3 -->
+            <div class="partner-card">
+                <div class="partner-logo">
+                    <img src="{{ url_for('static', filename='images/partner3.png') }}" alt="Company 3" loading="lazy">
+                </div>
+               <h4>PYVA</h4>
+                <p>CEO</p>
+            </div>
+
+            <!-- PARTNER 4 -->
+            <div class="partner-card">
+                <div class="partner-logo">
+                    <img src="{{ url_for('static', filename='images/partner4.png') }}" alt="Company 4" loading="lazy">
+                </div>
+               <h4>PYVA</h4>
+               <p>CEO</p>
+            </div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="partners-grid">
+            <!-- PARTNER 5 -->
+            <div class="partner-card">
+                <div class="partner-logo">
+                    <img src="{{ url_for('static', filename='images/partner5.png') }}" alt="Company 5" loading="lazy">
+                </div>
+                <h4>PYVA</h4>
+                <p>CEO</p>
+            </div>
+
+            <!-- PARTNER 6 -->
+            <div class="partner-card">
+                <div class="partner-logo">
+                    <img src="{{ url_for('static', filename='images/partner6.png') }}" alt="Company 6" loading="lazy">
+                </div>
+               <h4>PYVA</h4>
+                <p>CEO</p>
+            </div>
+
+            <!-- PARTNER 7 -->
+            <div class="partner-card">
+                <div class="partner-logo">
+                    <img src="{{ url_for('static', filename='images/partner7.png') }}" alt="Company 7" loading="lazy">
+                </div>
+                <h4>PYVA</h4>
+                <p>CEO</p>
+            </div>
+
+            <!-- PARTNER 8 -->
+            <div class="partner-card">
+                <div class="partner-logo">
+                    <img src="{{ url_for('static', filename='images/partner8.png') }}" alt="Company 8" loading="lazy">
+                </div>
+                <h4>PYVA</h4>
+                <p>CEO</p>
+            </div>
+        </div>
+
+        <!-- Become Partner CTA -->
+        <div class="partner-cta text-center">
+            <h3>Become Our Partner</h3>
+            <p>Join 10+ companies transforming careers with PYVA</p>
+            <a href="{{ url_for('contact') }}" class="btn btn-primary btn-large">Partner With Us</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+.partners-hero {
+    padding: 140px 0 80px;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    text-align: center;
+}
+
+.partners-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.partners-hero p {
+    font-size: 1.3rem;
+    color: var(--gray);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.partners-section {
+    padding: 120px 0;
+    background: white;
+}
+
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+.partner-card {
+    text-align: center;
+    padding: 40px 20px;
+    background: #f8fafc;
+    border-radius: 20px;
+    transition: all 0.4s ease;
+    border: 2px solid transparent;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.partner-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+    border-color: var(--orange);
+    background: white;
+}
+
+.partner-logo {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 24px;
+    border-radius: 20px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.partner-card:hover .partner-logo {
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.partner-logo img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.partner-card h4 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 12px;
+}
+
+.partner-card p {
+    color: var(--gray);
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.partner-cta {
+    padding: 60px 40px;
+    background: linear-gradient(135deg, var(--orange), #ff8c42);
+    border-radius: 30px;
+    color: white;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.partner-cta h3 {
+    font-size: 2.2rem;
+    margin-bottom: 16px;
+}
+
+.partner-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 32px;
+    opacity: 0.95;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .partners-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .partners-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .partners-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .partner-card {
+        padding: 30px 20px;
+    }
+    
+    .partner-logo {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .partner-logo img {
+        width: 60px;
+        height: 60px;
+    }
+}
+</style>
+{% endblock %}

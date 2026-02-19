@@ -1,0 +1,877 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- [KEEP SAME HERO SECTION] -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-grid"> 
+            <div class="hero-content">
+                <div class="quote-badge">
+                    <i class="fas fa-quote-left"></i>
+                    <span>"The best time to plant a tree was 20 years ago. The second best time is now."</span>
+                </div>
+                <h1>Training Students <span class="highlight">Beginner to Pro</span></h1>
+                <p>Master technical skills in <strong>3 months</strong>. Real projects. Job ready.</p>
+                <br>
+                <div class="hero-buttons">
+                    <a href="#courses" class="btn btn-primary">Explore Courses</a>
+                    <a href="#about" class="btn btn-outline">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div class="stat"><span class="student-counter">2K</span><p>completed student</p></div>
+                <div class="stat"><span>2-3</span><p>new students daily</p></div>
+                <div class="stat"><span>3 Months</span><p>Duration</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--  NEW COURSE STRUCTURE - 3 ROWS AS YOU REQUESTED -->
+<section class="courses-section" id="courses">
+    <div class="container">
+        <div class="section-header text-center">
+            <h2>Popular <span style="color: var(--orange);">Courses</span></h2>
+            <p>Choose your learning path</p>
+        </div>
+        
+        <!--  FIRST ROW -->
+        <div class="courses-grid">
+            <div class="course-card" onclick="openRoadmap('python')">
+                <div class="course-icon">
+                    <i class="fab fa-python"></i>
+                </div>
+                <h4>Python Full Stack</h4>
+                <p>Zero → Hero</p>
+                <div class="course-duration">3 Months</div>
+                <button class="btn btn-primary">View Roadmap</button>
+            </div>
+
+            <div class="course-card" onclick="openRoadmap('java')">
+                <div class="course-icon">
+                    <i class="fab fa-java"></i>
+                </div>
+                <h4>Java Full Stack</h4>
+                <p>Enterprise Ready</p>
+                <div class="course-duration">3 Months</div>
+                <button class="btn btn-outline">View Roadmap</button>
+            </div>
+
+            <div class="course-card" onclick="openRoadmap('devops')">
+                <div class="course-icon">
+                    <i class="fas fa-cloud"></i>
+                </div>
+                <h4>DevOps & Cloud</h4>
+                <p>Docker & AWS</p>
+                <div class="course-duration">3 Months</div>
+                <button class="btn btn-outline">View Roadmap</button>
+            </div>
+
+            <div class="course-card" onclick="openRoadmap('web')">
+                <div class="course-icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <h4>Web Development</h4>
+                <p>HTML/CSS/JS</p>
+                <div class="course-duration">2 Months</div>
+                <button class="btn btn-outline">View Roadmap</button>
+            </div>
+        </div>
+        
+        <!--  SECOND ROW -->
+        <div class="courses-grid">
+            <div class="course-card" onclick="openRoadmap('frontend')">
+                <div class="course-icon">
+                    <i class="fab fa-react"></i>
+                </div>
+                <h4>Front-end Development</h4>
+                <p>React & UI/UX</p>
+                <div class="course-duration">2.5 Months</div>
+                <button class="btn btn-outline">View Roadmap</button>
+            </div>
+
+            <div class="course-card" onclick="openRoadmap('backend')">
+                <div class="course-icon">
+                    <i class="fas fa-server"></i>
+                </div>
+                <h4>Back-end Development</h4>
+                <p>APIs & Databases</p>
+                <div class="course-duration">2.5 Months</div>
+                <button class="btn btn-outline">View Roadmap</button>
+            </div>
+
+            <div class="course-card" onclick="openRoadmap('data')">
+                <div class="course-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h4>Data Analysis</h4>
+                <p>Python & Excel</p>
+                <div class="course-duration">2 Months</div>
+                <button class="btn btn-outline">View Roadmap</button>
+            </div>
+
+            <div class="course-card" onclick="openRoadmap('dbms')">
+                <div class="course-icon">
+                    <i class="fas fa-database"></i>
+                </div>
+                <h4>DBMS</h4>
+                <p>SQL & MongoDB</p>
+                <div class="course-duration">1.5 Months</div>
+                <button class="btn btn-outline">View Roadmap</button>
+            </div>
+        </div>
+
+        <!--  THIRD ROW -->
+        <div class="courses-grid">
+            <div class="course-card" onclick="openRoadmap('digital')">
+                <div class="course-icon">
+                    <i class="fas fa-bullhorn"></i>
+                </div>
+                <h4>Digital Marketing</h4>
+                <p>SEO & Social Media</p>
+                <div class="course-duration">2 Months</div>
+                <button class="btn btn-outline">View Roadmap</button>
+            </div>
+
+            <div class="course-card" onclick="openRoadmap('communication')">
+                <div class="course-badge">🎤 Interview</div>
+                <div class="course-icon">
+                    <i class="fas fa-microphone"></i>
+                </div>
+                <h4>Communication Skills</h4>
+                <p>Interview Ready</p>
+                <div class="course-duration">1 Month</div>
+                <button class="btn btn-outline">View Roadmap</button>
+            </div>
+
+            <div class="course-card" onclick="openRoadmap('nonit')">
+                <div class="course-icon">
+                    <i class="fas fa-book"></i>
+                </div>
+                <h4>Non-IT Course</h4>
+                <p>Soft Skills & Career</p>
+                <div class="course-duration">1.5 Months</div>
+                <button class="btn btn-outline">View Roadmap</button>
+            </div>
+
+            <div class="course-card" onclick="openRoadmap('more')">
+                <div class="course-icon">
+                    <i class="fas fa-plus-circle"></i>
+                </div>
+                <h4>More Courses</h4>
+                <p>Explore All</p>
+                <div class="course-duration">View All</div>
+                <a href="{{ url_for('courses') }}" class="btn btn-primary">View All</a>
+            </div>
+        </div>
+        
+        <!-- View All Courses Button -->
+        <div class="text-center" style="margin-top: 80px;">
+            <a href="{{ url_for('courses') }}" class="btn btn-primary btn-large">View All Courses</a>
+        </div>
+    </div>
+</section>
+
+<!--  ROADMAP MODAL -->
+<div id="roadmapModal" class="roadmap-modal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 id="modalTitle"></h2>
+            <span class="close-btn">&times;</span>
+        </div>
+        <div id="roadmapContent"></div>
+    </div>
+</div>
+
+<!--  COMPLETE ROADMAP DATA FOR ALL 11 COURSES -->
+<script>
+const roadmaps = {
+    // 1. PYTHON FULL STACK
+    python: {
+        title: " Python Full Stack Development",
+        duration: "3 Months Journey",
+        description: "Master Python from basics to building real-world web applications",
+        path: [
+            {
+                month: "Month 1",
+                title: "Python Foundations",
+                icon: "👨‍💻",
+                weeks: [
+                    {
+                        week: "Week 1-2",
+                        focus: "Python Basics",
+                        topics: ["Variables & Data Types", "Operators & Expressions", "Control Flow (if/else)", "Loops (for/while)", "Basic Programs"]
+                    },
+                    {
+                        week: "Week 3-4",
+                        focus: "Advanced Python",
+                        topics: ["Functions & Modules", "Lists, Tuples, Dictionaries", "File Handling", "Exception Handling", "OOP Basics (Classes & Objects)"]
+                    }
+                ]
+            },
+            {
+                month: "Month 2",
+                title: "Web Development",
+                icon: "👨‍💻",
+                weeks: [
+                    {
+                        week: "Week 5-6",
+                        focus: "Frontend Basics",
+                        topics: ["HTML5 & Semantic Tags", "CSS3 Styling & Layouts", "JavaScript Fundamentals", "Bootstrap Framework", "Responsive Design"]
+                    },
+                    {
+                        week: "Week 7-8",
+                        focus: "Flask Framework",
+                        topics: ["Flask Setup & Routing", "Jinja2 Templates", "Forms & Validations", "Database Integration (SQLite)", "Session Management"]
+                    }
+                ]
+            },
+            {
+                month: "Month 3",
+                title: "Professional Development",
+                icon: "👨‍💻",
+                weeks: [
+                    {
+                        week: "Week 9-10",
+                        focus: "Django & APIs",
+                        topics: ["Django Framework", "Models & ORM", "REST API Development", "Authentication & Authorization", "Payment Integration"]
+                    },
+                    {
+                        week: "Week 11-12",
+                        focus: "Real Projects & Deployment",
+                        topics: ["Build E-commerce Website", "Git & GitHub", "Deploy on Heroku/AWS", "Resume Building", "Mock Interviews"]
+                    }
+                ]
+            }
+        ],
+        projects: [" Portfolio Website", " E-commerce Store", " Blog Platform", " Chat Application"],
+        outcomes: ["Full Stack Developer Ready", "50+ Coding Problems Solved", "3 Live Projects Deployed", "Interview Preparation Complete"]
+    },
+
+    // 2. JAVA FULL STACK
+    java: {
+        title: " Java Full Stack Development",
+        duration: "3 Months Journey",
+        description: "Enterprise-level Java development with Spring Boot",
+        path: [
+            {
+                month: "Month 1",
+                title: "Core Java",
+                icon: "👨‍💻",
+                weeks: [
+                    {
+                        week: "Week 1-2",
+                        focus: "Java Fundamentals",
+                        topics: ["JDK/JRE/JVM Setup", "Variables & Data Types", "Operators & Control Statements", "Arrays & Strings", "Methods & Recursion"]
+                    },
+                    {
+                        week: "Week 3-4",
+                        focus: "OOP & Collections",
+                        topics: ["Classes & Objects", "Inheritance & Polymorphism", "Abstract Classes & Interfaces", "Collections Framework", "Exception Handling"]
+                    }
+                ]
+            },
+            {
+                month: "Month 2",
+                title: "Web Technologies",
+                icon: "👨‍💻",
+                weeks: [
+                    {
+                        week: "Week 5-6",
+                        focus: "Database & JDBC",
+                        topics: ["SQL & MySQL", "JDBC Connectivity", "Servlets & JSP", "HTML/CSS/JavaScript", "Bootstrap"]
+                    },
+                    {
+                        week: "Week 7-8",
+                        focus: "Spring Framework",
+                        topics: ["Spring Boot Introduction", "Dependency Injection", "Spring MVC", "REST API Creation", "Postman Testing"]
+                    }
+                ]
+            },
+            {
+                month: "Month 3",
+                title: "Advanced & Deployment",
+                icon: "👨‍💻 ",
+                weeks: [
+                    {
+                        week: "Week 9-10",
+                        focus: "Spring Boot Advanced",
+                        topics: ["Spring Data JPA", "Spring Security", "Microservices Basics", "JWT Authentication", "File Upload/Download"]
+                    },
+                    {
+                        week: "Week 11-12",
+                        focus: "Projects & Deployment",
+                        topics: ["Banking Application Project", "Deploy on AWS", "Docker Basics", "Resume Building", "Interview Preparation"]
+                    }
+                ]
+            }
+        ],
+        projects: [" Banking System", " Library Management", " Online Shopping", " Employee Management"],
+        outcomes: ["Enterprise Java Developer", "Microservices Understanding", "Cloud Deployment Skills", "Job Ready"]
+    },
+
+    // 3. DEVOPS & CLOUD
+    devops: {
+        title: " DevOps & Cloud Engineering",
+        duration: "3 Months Journey",
+        description: "Master modern DevOps tools and cloud platforms",
+        path: [
+            {
+                month: "Month 1",
+                title: "Linux & Version Control",
+                icon: "👨‍💻",
+                weeks: [
+                    {
+                        week: "Week 1-2",
+                        focus: "Linux Mastery",
+                        topics: ["Linux Commands", "File System & Permissions", "Shell Scripting", "Package Management", "Process Management"]
+                    },
+                    {
+                        week: "Week 3-4",
+                        focus: "Git & CI/CD",
+                        topics: ["Git Basics & Branching", "GitHub/GitLab", "CI/CD Concepts", "Jenkins Setup", "Automated Testing"]
+                    }
+                ]
+            },
+            {
+                month: "Month 2",
+                title: "Containers & Orchestration",
+                icon: "👨‍💻",
+                weeks: [
+                    {
+                        week: "Week 5-6",
+                        focus: "Docker",
+                        topics: ["Docker Installation", "Containers & Images", "Dockerfile Creation", "Docker Compose", "Container Networking"]
+                    },
+                    {
+                        week: "Week 7-8",
+                        focus: "Kubernetes",
+                        topics: ["K8s Architecture", "Pods & Deployments", "Services & Ingress", "ConfigMaps & Secrets", "Helm Charts"]
+                    }
+                ]
+            },
+            {
+                month: "Month 3",
+                title: "Cloud & Automation",
+                icon: "👨‍💻",
+                weeks: [
+                    {
+                        week: "Week 9-10",
+                        focus: "AWS Cloud",
+                        topics: ["EC2 & S3", "RDS & Lambda", "IAM & Security", "Load Balancers", "Auto Scaling"]
+                    },
+                    {
+                        week: "Week 11-12",
+                        focus: "Infrastructure as Code",
+                        topics: ["Terraform Basics", "Ansible Automation", "Monitoring (Prometheus)", "Real Project Deployment", "Interview Prep"]
+                    }
+                ]
+            }
+        ],
+        projects: [" Deploy Full Stack App", " CI/CD Pipeline", " Monitoring Dashboard", " Infrastructure Setup"],
+        outcomes: ["DevOps Engineer Ready", "AWS Certified Path", "Container Expert", "Production Deployment Skills"]
+    },
+
+    // 4. WEB DEVELOPMENT
+    web: {
+        title: " Web Development",
+        duration: "2 Months Journey",
+        description: "Build modern, responsive websites from scratch",
+        path: [
+            {
+                month: "Month 1",
+                title: "HTML & CSS Mastery",
+                icon: "👨‍💻",
+                weeks: [
+                    {
+                        week: "Week 1-2",
+                        focus: "HTML5",
+                        topics: ["HTML Structure & Tags", "Forms & Input Types", "Semantic HTML", "Tables & Lists", "Media Elements"]
+                    },
+                    {
+                        week: "Week 3-4",
+                        focus: "CSS3 & Design",
+                        topics: ["CSS Selectors & Properties", "Flexbox & Grid", "Responsive Design", "Animations & Transitions", "Bootstrap Framework"]
+                    }
+                ]
+            },
+            {
+                month: "Month 2",
+                title: "JavaScript & Projects",
+                icon: "👨‍💻",
+                weeks: [
+                    {
+                        week: "Week 5-6",
+                        focus: "JavaScript Basics",
+                        topics: ["Variables & Functions", "DOM Manipulation", "Event Handling", "ES6 Features", "Fetch API & AJAX"]
+                    },
+                    {
+                        week: "Week 7-8",
+                        focus: "Real Projects",
+                        topics: ["Portfolio Website", "Todo App", "Weather App", "Landing Pages", "Deploy on GitHub Pages"]
+                    }
+                ]
+            }
+        ],
+        projects: [" Portfolio Website", " Weather App", " Todo Application", " Landing Pages"],
+        outcomes: ["Frontend Developer", "5+ Live Projects", "Freelancing Ready", "Modern Web Skills"]
+    },
+
+    // 5. FRONTEND DEVELOPMENT
+    frontend: {
+        title: " Front-end Development (React)",
+        duration: "2.5 Months Journey",
+        description: "Build modern UI with React and latest tools",
+        path: [
+            {
+                month: "Month 1",
+                title: "JavaScript Advanced",
+                icon: "👨‍💻",
+                weeks: [
+                    {
+                        week: "Week 1-2",
+                        focus: "ES6+ Features",
+                        topics: ["Arrow Functions", "Destructuring", "Spread Operator", "Promises & Async/Await", "Array Methods (map, filter, reduce)"]
+                    },
+                    {
+                        week: "Week 3-4",
+                        focus: "Advanced Concepts",
+                        topics: ["Closures & Scope", "Fetch API", "Axios", "JSON Handling", "Error Handling"]
+                    }
+                ]
+            },
+            {
+                month: "Month 2",
+                title: "React Fundamentals",
+                icon: "👨‍💻",
+                weeks: [
+                    {
+                        week: "Week 5-6",
+                        focus: "React Basics",
+                        topics: ["Components & JSX", "Props & State", "Event Handling", "Conditional Rendering", "Lists & Keys"]
+                    },
+                    {
+                        week: "Week 7-8",
+                        focus: "React Hooks",
+                        topics: ["useState Hook", "useEffect Hook", "Custom Hooks", "React Router", "Forms in React"]
+                    }
+                ]
+            },
+            {
+                month: "Month 3",
+                title: "Advanced & Deployment",
+                icon: "👨‍💻",
+                weeks: [
+                    {
+                        week: "Week 9-10",
+                        focus: "State Management",
+                        topics: ["Context API", "Redux Basics", "API Integration", "Authentication (JWT)", "Protected Routes"]
+                    },
+                    {
+                        week: "Week 11",
+                        focus: "Production Ready",
+                        topics: ["Build E-commerce Frontend", "Performance Optimization", "Deploy on Vercel/Netlify", "Portfolio Building"]
+                    }
+                ]
+            }
+        ],
+        projects: [" E-commerce Frontend", " Movie App", " Chat UI", " Dashboard"],
+        outcomes: ["React Developer", "Modern UI/UX", "API Integration Expert", "Production Deployment"]
+    },
+
+    // 6. BACKEND DEVELOPMENT
+    backend: {
+        title: " Back-end Development",
+        duration: "2.5 Months Journey",
+        description: "Build powerful APIs and server-side applications",
+        path: [
+            {
+                month: "Month 1",
+                title: "Node.js Basics",
+                icon: "👨‍💻",
+                weeks: [
+                    {
+                        week: "Week 1-2",
+                        focus: "Node Fundamentals",
+                        topics: ["Node.js Setup", "Modules & NPM", "File System", "HTTP Module", "Creating Server"]
+                    },
+                    {
+                        week: "Week 3-4",
+                        focus: "Express.js",
+                        topics: ["Express Setup", "Routing & Middleware", "Request/Response", "REST API Basics", "Postman Testing"]
+                    }
+                ]
+            },
+            {
+                month: "Month 2",
+                title: "Database & Authentication",
+                icon: "👨‍💻",
+                weeks: [
+                    {
+                        week: "Week 5-6",
+                        focus: "MongoDB",
+                        topics: ["MongoDB Setup", "Mongoose ODM", "CRUD Operations", "Schema Design", "Relationships"]
+                    },
+                    {
+                        week: "Week 7-8",
+                        focus: "Security",
+                        topics: ["JWT Authentication", "Password Hashing (bcrypt)", "Authorization Middleware", "Protected Routes", "Role-Based Access"]
+                    }
+                ]
+            },
+            {
+                month: "Month 3",
+                title: "Advanced Features",
+                icon: "👨‍💻",
+                weeks: [
+                    {
+                        week: "Week 9-10",
+                        focus: "Advanced APIs",
+                        topics: ["File Uploads (Multer)", "Email Service (Nodemailer)", "Payment Gateway (Stripe)", "WebSockets", "Error Handling"]
+                    },
+                    {
+                        week: "Week 11",
+                        focus: "Deployment",
+                        topics: ["Build Blog API", "Deploy on Heroku/AWS", "Environment Variables", "API Documentation"]
+                    }
+                ]
+            }
+        ],
+        projects: [" Blog API", " Authentication System", " Payment Integration", " Real-time Chat"],
+        outcomes: ["Backend Developer", "API Expert", "Security Best Practices", "Cloud Deployment"]
+    },
+
+    // 7. DATA ANALYSIS
+    data: {
+        title: " Data Analysis with Python",
+        duration: "2 Months Journey",
+        description: "Analyze data and create insights with Python",
+        path: [
+            {
+                month: "Month 1",
+                title: "Python for Data",
+                icon: "👨‍💻",
+                weeks: [
+                    {
+                        week: "Week 1-2",
+                        focus: "NumPy & Pandas",
+                        topics: ["NumPy Arrays", "Array Operations", "Pandas DataFrames", "Data Loading (CSV/Excel)", "Data Exploration"]
+                    },
+                    {
+                        week: "Week 3-4",
+                        focus: "Data Cleaning",
+                        topics: ["Handling Missing Data", "Data Transformation", "Filtering & Sorting", "Merging Datasets", "Excel Automation"]
+                    }
+                ]
+            },
+            {
+                month: "Month 2",
+                title: "Visualization & Projects",
+                icon: "👨‍💻",
+                weeks: [
+                    {
+                        week: "Week 5-6",
+                        focus: "Data Visualization",
+                        topics: ["Matplotlib Basics", "Seaborn Charts", "Statistical Plots", "Interactive Dashboards (Plotly)", "Data Storytelling"]
+                    },
+                    {
+                        week: "Week 7-8",
+                        focus: "Real Projects",
+                        topics: ["Sales Data Analysis", "COVID-19 Data Analysis", "Stock Market Analysis", "Kaggle Datasets", "Portfolio Creation"]
+                    }
+                ]
+            }
+        ],
+        projects: [" Sales Dashboard", " COVID Analysis", " Stock Predictor", " World Data Insights"],
+        outcomes: ["Data Analyst Ready", "Excel Expert", "Visualization Master", "Real Dataset Experience"]
+    },
+
+    // 8. DBMS
+    dbms: {
+        title: " Database Management Systems",
+        duration: "1.5 Months Journey",
+        description: "Master SQL and NoSQL databases",
+        path: [
+            {
+                month: "Month 1",
+                title: "SQL Mastery",
+                icon: "👨‍💻",
+                weeks: [
+                    {
+                        week: "Week 1-2",
+                        focus: "SQL Basics",
+                        topics: ["Database Concepts", "CREATE, INSERT, SELECT", "WHERE & Operators", "UPDATE & DELETE", "ORDER BY & LIMIT"]
+                    },
+                    {
+                        week: "Week 3-4",
+                        focus: "Advanced SQL",
+                        topics: ["Joins (INNER, LEFT, RIGHT)", "Group By & Having", "Subqueries", "Indexes", "Stored Procedures"]
+                    }
+                ]
+            },
+            {
+                month: "Weeks 5-6",
+                title: "NoSQL & Projects",
+                icon: "👨‍💻",
+                weeks: [
+                    {
+                        week: "Week 5",
+                        focus: "MongoDB",
+                        topics: ["MongoDB Setup", "Collections & Documents", "CRUD Operations", "Aggregation", "Indexing"]
+                    },
+                    {
+                        week: "Week 6",
+                        focus: "Real Projects",
+                        topics: ["Library Management System", "Student Database", "E-commerce DB Design", "Optimization Techniques"]
+                    }
+                ]
+            }
+        ],
+        projects: [" Library System", " Student Management", " E-commerce DB", " Hospital Records"],
+        outcomes: ["Database Expert", "SQL Pro", "NoSQL Knowledge", "Interview Ready"]
+    },
+
+    // 9. DIGITAL MARKETING
+    digital: {
+        title: " Digital Marketing",
+        duration: "2 Months Journey",
+        description: "Master online marketing and grow businesses",
+        path: [
+            {
+                month: "Month 1",
+                title: "SEO & Social Media",
+                icon: "👨‍💻",
+                weeks: [
+                    {
+                        week: "Week 1-2",
+                        focus: "SEO Mastery",
+                        topics: ["SEO Fundamentals", "Keyword Research", "On-Page SEO", "Off-Page SEO", "Google Analytics"]
+                    },
+                    {
+                        week: "Week 3-4",
+                        focus: "Social Media Marketing",
+                        topics: ["Facebook Marketing", "Instagram Growth", "LinkedIn Strategy", "Content Creation", "Influencer Marketing"]
+                    }
+                ]
+            },
+            {
+                month: "Month 2",
+                title: "Paid Ads & Campaigns",
+                icon: "👨‍💻",
+                weeks: [
+                    {
+                        week: "Week 5-6",
+                        focus: "Google & Facebook Ads",
+                        topics: ["Google Ads Setup", "PPC Campaigns", "Facebook Ads Manager", "Targeting & Retargeting", "A/B Testing"]
+                    },
+                    {
+                        week: "Week 7-8",
+                        focus: "Email & Projects",
+                        topics: ["Email Marketing", "Lead Generation", "Campaign Analytics", "Real Campaign Launch", "Certification Prep"]
+                    }
+                ]
+            }
+        ],
+        projects: [" Launch Real Campaign", " Email Automation", " SEO Audit", " Social Media Strategy"],
+        outcomes: ["Digital Marketer", "Google Ads Expert", "Campaign Manager", "Certified Professional"]
+    },
+
+    // 10. COMMUNICATION SKILLS
+    communication: {
+        title: " Communication Skills",
+        duration: "1 Month Intensive",
+        description: "Master communication for IT interviews",
+        path: [
+            {
+                month: "Weeks 1-2",
+                title: "Basics & Confidence",
+                icon: "👨‍💻",
+                weeks: [
+                    {
+                        week: "Week 1",
+                        focus: "English Fundamentals",
+                        topics: ["Grammar Basics", "Vocabulary Building", "Sentence Formation", "Email Writing", "Active Listening"]
+                    },
+                    {
+                        week: "Week 2",
+                        focus: "Confidence Building",
+                        topics: ["Public Speaking", "Body Language", "Voice Modulation", "Presentation Skills", "Group Discussion"]
+                    }
+                ]
+            },
+            {
+                month: "Weeks 3-4",
+                title: "Interview Preparation",
+                icon: "👨‍💻",
+                weeks: [
+                    {
+                        week: "Week 3",
+                        focus: "Technical Communication",
+                        topics: ["Explaining Projects", "Technical Terminology", "Problem Solving Explanation", "Flowchart Reading", "Pseudocode"]
+                    },
+                    {
+                        week: "Week 4",
+                        focus: "Mock Interviews",
+                        topics: ["HR Questions", "Behavioral Questions", "STAR Method", "Salary Negotiation", "Resume Explanation", "Real Mock Interviews"]
+                    }
+                ]
+            }
+        ],
+        projects: [" Resume Building", " Video Presentations", " Group Discussions", " Mock Interviews"],
+        outcomes: ["Interview Confidence", "Fluent Communication", "Professional Presentation", "Job Ready"]
+    },
+
+    // 11. NON-IT COURSE
+    nonit: {
+        title: " Non-IT Professional Skills",
+        duration: "1.5 Months Journey",
+        description: "Essential skills for career growth",
+        path: [
+            {
+                month: "Month 1",
+                title: "Soft Skills",
+                icon: "👨‍💻",
+                weeks: [
+                    {
+                        week: "Week 1-2",
+                        focus: "Personal Development",
+                        topics: ["Time Management", "Goal Setting", "Problem Solving", "Critical Thinking", "Emotional Intelligence"]
+                    },
+                    {
+                        week: "Week 3-4",
+                        focus: "Professional Skills",
+                        topics: ["Leadership Basics", "Team Collaboration", "Conflict Resolution", "Decision Making", "Work Ethics"]
+                    }
+                ]
+            },
+            {
+                month: "Weeks 5-6",
+                title: "Career Building",
+                icon: "👨‍💻",
+                weeks: [
+                    {
+                        week: "Week 5",
+                        focus: "Job Readiness",
+                        topics: ["Resume Writing", "LinkedIn Profile", "Networking Skills", "Personal Branding", "Career Planning"]
+                    },
+                    {
+                        week: "Week 6",
+                        focus: "Interview & Growth",
+                        topics: ["Interview Preparation", "Salary Negotiation", "Career Mentorship", "Continuous Learning", "Success Mindset"]
+                    }
+                ]
+            }
+        ],
+        projects: [" Professional Resume", " LinkedIn Optimization", " Career Plan", " Personal Brand"],
+        outcomes: ["Career Ready", "Leadership Skills", "Professional Network", "Growth Mindset"]
+    }
+};
+
+//  BEAUTIFUL ROADMAP FUNCTION
+function openRoadmap(type) {
+    const roadmap = roadmaps[type];
+    if (!roadmap) return;
+    
+    document.getElementById('modalTitle').innerHTML = roadmap.title;
+    
+    let html = `
+        <div class="roadmap-header">
+            <div class="roadmap-duration">${roadmap.duration}</div>
+            <p class="roadmap-description">${roadmap.description}</p>
+        </div>
+        
+        <div class="roadmap-timeline">
+    `;
+    
+    // Generate timeline path
+    roadmap.path.forEach((phase, phaseIdx) => {
+        html += `
+            <div class="phase-block">
+                <div class="phase-header">
+                    <span class="phase-icon">${phase.icon}</span>
+                    <div>
+                        <h3>${phase.month}</h3>
+                        <h4>${phase.title}</h4>
+                    </div>
+                </div>
+                
+                <div class="weeks-container">
+        `;
+        
+        phase.weeks.forEach((week, weekIdx) => {
+            html += `
+                <div class="week-card">
+                    <div class="week-header">
+                        <span class="week-badge">${week.week}</span>
+                        <strong>${week.focus}</strong>
+                    </div>
+                    <ul class="topics-list">
+                        ${week.topics.map(topic => `<li>✓ ${topic}</li>`).join('')}
+                    </ul>
+                </div>
+            `;
+        });
+        
+        html += `
+                </div>
+            </div>
+        `;
+        
+        // Add connector line (except for last phase)
+        if (phaseIdx < roadmap.path.length - 1) {
+            html += `<div class="phase-connector">⬇</div>`;
+        }
+    });
+    
+    html += `</div>`;
+    
+    // Projects section
+    if (roadmap.projects) {
+        html += `
+            <div class="roadmap-projects">
+                <h3> Real Projects You'll Build</h3>
+                <div class="projects-grid">
+                    ${roadmap.projects.map(project => `<div class="project-tag">${project}</div>`).join('')}
+                </div>
+            </div>
+        `;
+    }
+    
+    // Outcomes section
+    if (roadmap.outcomes) {
+        html += `
+            <div class="roadmap-outcomes">
+                <h3>🏆 What You'll Achieve</h3>
+                <div class="outcomes-grid">
+                    ${roadmap.outcomes.map(outcome => `<div class="outcome-tag">✅ ${outcome}</div>`).join('')}
+                </div>
+            </div>
+        `;
+    }
+    
+    // CTA Button
+    html += `
+        <div class="roadmap-cta">
+            <a href="{{ url_for('contact') }}" class="btn btn-primary btn-large">
+                 Book Free Demo & Start Learning
+            </a>
+        </div>
+    `;
+    
+    document.getElementById('roadmapContent').innerHTML = html;
+    document.getElementById('roadmapModal').classList.add('active');
+}
+
+// Close modal
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('.close-btn')?.addEventListener('click', () => {
+        document.getElementById('roadmapModal').classList.remove('active');
+    });
+    
+    document.querySelector('.modal-overlay')?.addEventListener('click', () => {
+        document.getElementById('roadmapModal').classList.remove('active');
+    });
+});
+</script>
+{% endblock %}
